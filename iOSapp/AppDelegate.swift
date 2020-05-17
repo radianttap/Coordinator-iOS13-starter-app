@@ -31,6 +31,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		//	instantiate all services and middleware
 		//	build and set AppDependency
+		appDependency = AppDependency()
+		
+		//	On first app launch, UIKit creates default UISceneSession and skips the configurationForConnecting method below.
+		//	Setting `appDependency` above will take care of that session.
 		
 		return true
 	}
